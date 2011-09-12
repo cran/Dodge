@@ -1,0 +1,33 @@
+DSPlanBinomial <-
+function (N, n1, n2, Ac1, Re1, Ac2, p = seq(0, 0.25, 0.005), 
+    Plots = TRUE) 
+{
+    Pa1 = pbinom(Ac1, n1, p)
+    limits = (Ac1 + 1):(Re1 - 1)
+    i = 0
+    Pa2 = matrix(0, ncol = length(limits), nrow = length(p))
+    for (d1 in limits) {
+        i = i + 1
+        pc = dbinom(d1, n1, p) * pbinom((Ac2 - d1), n2, p)
+        Pa2[, i] = pc
+        Pa2
+    }
+    Pa2 = rowSums(Pa2)
+    OC = Pa1 + Pa2
+    ASN = n1 + n2 * (pbinom((Re1 - 1), n1, p) - pbinom(Ac1, n1, 
+        p))
+    AOQ = (p * Pa1 * (N - n1) + p * Pa2 * (N - n1 - n2))/N
+    ATI = n1 * Pa1 + (n1 + n2) * Pa2 + (1 - OC) * N
+    results = cbind(p, Pa1, Pa2, OC, ASN, AOQ, ATI)
+    if (Plots) {
+        par(mfrow = c(2, 2))
+        plot(OC ~ p, type = "l", ylab = "Probability of Acceptance", 
+            xlab = "Fraction Nonconforming p")
+        plot(ASN ~ p, type = "l", ylab = "Uncurtailed average sample size", 
+            xlab = "Fraction Nonconforming p")
+        plot(AOQ ~ p, type = "l", ylab = "AOQ", xlab = "Fraction Nonconforming p")
+        title(paste("AOQL = ", formatC(max(AOQ))))
+        plot(ATI ~ p, type = "l", ylab = "ATI", xlab = "Fraction Nonconforming p")
+        par(mfrow = c(1, 1))
+    }
+}
