@@ -20,5 +20,5 @@ function (AQL, alpha, LQL, beta)
         Ac = Ac + 1
     }
     n = nl(Ac, LQL, beta)
-    cbind(n, Ac)
+    return(data.frame(n, Ac))
 }

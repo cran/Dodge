@@ -30,6 +30,7 @@ Dodge, H.F. (1955) \dQuote{Chain Sampling Inspection Plan},
 \emph{Industrial Quality Control} \bold{11}(4), pp10-13.}
 \author{Raj Govindaraju with minor editing by Jonathan Godfrey}
 \examples{
+require(Dodge)
 ChainBinomial(1000, 20,3)
 ChainPoisson(1000, 20,3)
 }

@@ -10,5 +10,5 @@ function (AQL, alpha, LQL, beta)
     n = n * n
     n = round(n)
     n.unknown = n * (1 + (k * k/2))
-    return(c(k, n, n.unknown))
+    return(data.frame(k, n, n.unknown))
 }

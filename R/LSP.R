@@ -6,7 +6,9 @@ function (N, LTPD, beta, p = seq(0, 0.3, 0.001), Plots = TRUE)
     OC = (1 - f)^(N * p)
     AOQ = (N - n) * p * OC/N
     ATI = n * OC + N * (1 - OC)
-    results = cbind(p, OC, AOQ, ATI)
+    results = list(p = p, OC = OC, n = rep(n, length(p)), AOQ = AOQ, 
+        ATI = ATI)
+    class(results) = "AccSampPlan"
     if (Plots) {
         par(mfrow = c(2, 2))
         plot(OC ~ p, type = "l", ylab = "Probability of Acceptance", 
@@ -18,6 +20,6 @@ function (N, LTPD, beta, p = seq(0, 0.3, 0.001), Plots = TRUE)
         plot(AOQ ~ p, type = "l", ylab = "AOQ", xlab = "Fraction Nonconforming p")
         title(paste("AOQL = ", formatC(max(AOQ))))
         plot(ATI ~ p, type = "l", ylab = "ATI", xlab = "Fraction Nonconforming p")
-        par(mfrow = c(1, 1))
     }
+    return(results)
 }
