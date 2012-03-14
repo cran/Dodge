@@ -1,18 +1,16 @@
 \name{Sequential}
 \alias{Sequential}
+\alias{SequentialBinomial}
 \title{
 Attribute Sequential Sampling Plans}
 \description{
 Designs an attribute sequential sampling plan for given AQL, alpha, LQL, and beta. The user can request plots describing the performance of the plan.
 }
 \usage{
-Sequential(AQL, alpha, LQL, beta, Plots = TRUE)
+SequentialBinomial(x, Plots = TRUE)
 }
 \arguments{
-  \item{AQL}{Acceptable quality level}
-  \item{alpha}{producer's risk}
-  \item{LQL}{Limiting quality level}
-  \item{beta}{consumers' risk}
+\item{x}{an object of class SeqSampPlan, or at least having the same elements as one.}
   \item{Plots}{logical indicating if the four plots should be returned}
 }
 \details{
@@ -27,7 +25,8 @@ Sequential(AQL, alpha, LQL, beta, Plots = TRUE)
 \author{Raj Govindaraju with minor editing by Jonathan Godfrey}
 
 \examples{
-Sequential(AQL=0.01, alpha=0.05, LQL=0.04, beta=0.05)
+PlanDesign=SeqDesignBinomial(AQL=0.01, alpha=0.05, LQL=0.04, beta=0.05, Plots=FALSE)
+SequentialBinomial(PlanDesign)
 }
 \keyword{ ~kwd1 }
 \keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

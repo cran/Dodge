@@ -1,21 +1,27 @@
 \name{plot.AccSampPlan}
 \alias{plot.AccSampPlan}
+\alias{plot.CurtSampPlan}
+\alias{plot.SeqSampPlan}
 \title{
-plot method for the Dodge package
+plot methods for the Dodge package
 }
 \description{
-Creates plots of OC, AOQ, and ATI against proportion nonconforming. If the specific plan also includes other performance measures, these are also plotted against the proportion of nonconforming product.
+Creates plots for analysing the design of an acceptance sampling procedure.
 }
 \usage{
 \method{plot}{AccSampPlan}(x,y=NULL,...)
+
+\method{plot}{CurtSampPlan}(x,y=NULL,...)
+
+\method{plot}{SeqSampPlan}(x,y=NULL,...)
 }
 \arguments{
-  \item{x}{an object of class AccSampPlan}
+  \item{x}{an object of class AccSampPlan, CurtSampPlan, or SeqSampPlan}
 \item{y}{ignored}
 \item{...}{further arguments passed to or from other methods.}
 }
 \details{
-At this stage the method only plots the Operating Characteristic (OC) curve, the Average (AOQ) and (ATI) against the proportion (p) of product that is nonconforming. It also plots the curtailed sample size or the average sample number (ASN) against p. Further development is still required.
+At this stage the \code{plot.AccSampPlan} method only plots the Operating Characteristic (OC) curve, the Average (AOQ) and (ATI) against the proportion (p) of product that is nonconforming. It also plots the curtailed sample size or the average sample number (ASN) against p. Further development is still required.
 }
 \author{
 Jonathan Godfrey with some assistance from Raj Govindaraju
