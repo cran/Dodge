@@ -18,9 +18,6 @@ SSPDesignPoisson(AQL, alpha, LQL, beta)
   \item{LQL}{Limiting quality level}
   \item{beta}{consumers' risk}
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
 \references{
 Dodge, H.F. and Romig, H.G. (1959) \dQuote{Sampling Inspection Tables, Single and Double Sampling}, 2nd edition, John Wiley and Sons, New York.
 }

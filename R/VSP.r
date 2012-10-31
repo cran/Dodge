@@ -1,7 +1,6 @@
 
-VSPKnown=function(N, n, k, p=seq(0, 1, 0.001), Plots=TRUE)
+VSPKnown=function(N, n, k, Pa=seq(0, 1, 0.001), Plots=TRUE)
 {
-Pa = p
 zpa = qnorm(Pa)
 zp = k+(zpa/sqrt(n))
 p=1-pnorm(zp)
@@ -17,9 +16,8 @@ plot(results)
 return(results)
 }
 
-VSPUnknown=function(N, n, k, p=seq(0, 1, .001), Plots=TRUE)
+VSPUnknown=function(N, n, k, Pa=seq(0, 1, .001), Plots=TRUE)
 {
-Pa = p
 zpa = qnorm(Pa)
 k1 = sqrt(1+(k*k)/2)
 zp = k+(k1*zpa/sqrt(n))

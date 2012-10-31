@@ -23,12 +23,6 @@ SSPlanPoisson(N, n, Ac, p = seq(0, 0.3, 0.001), Plots = TRUE)
   \item{p}{a vector of values for the possible fraction of product that is nonconforming}
   \item{Plots}{logical to request generation of the four plots}
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-}
 \references{
 Dodge, H.F. and Romig, H.G. (1959) \dQuote{Sampling Inspection Tables, Single and Double Sampling}, 2nd edition, John Wiley and Sons, New York.
 }

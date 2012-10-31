@@ -15,12 +15,6 @@ CurtBinomial(n, Ac, p = seq(0, 0.5, 0.01), Plots = TRUE)
   \item{p}{a vector of values for the possible fraction of product that is nonconforming}
   \item{Plots}{logical to request generation of the four plots}
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
 \author{Raj Govindaraju with minor editing by Jonathan Godfrey}
 \examples{
 CurtBinomial(20,1)

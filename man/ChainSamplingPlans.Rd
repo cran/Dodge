@@ -20,9 +20,6 @@ ChainPoisson(N, n, i, p = seq(0, 0.3, 0.001), Plots = TRUE)
   \item{p}{a vector of values for the possible fraction of product that is nonconforming}
   \item{Plots}{logical to request generation of the four plots}
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
 \value{
 A matrix containing the argument \code{p} as supplied and the calculated OC, ATI and ???}
 \references{

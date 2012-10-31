@@ -13,15 +13,6 @@ SequentialBinomial(x, Plots = TRUE)
 \item{x}{an object of class SeqSampPlan, or at least having the same elements as one.}
   \item{Plots}{logical indicating if the four plots should be returned}
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
 \author{Raj Govindaraju with minor editing by Jonathan Godfrey}
 
 \examples{

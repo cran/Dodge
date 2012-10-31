@@ -19,24 +19,8 @@ SeqDesignBinomial(N, AQL, alpha, LQL, beta, Plots = TRUE)
   \item{Plots}{
 logical stating if the sequential chart should be plotted}
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
-\author{
-Raj Govindaraju and Jonathan Godfrey}
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
+
+\author{Raj Govindaraju and Jonathan Godfrey}
 \examples{
 ##---- Should be DIRECTLY executable !! ----
 ##-- ==>  Define data, use random,

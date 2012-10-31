@@ -16,12 +16,6 @@ LSP(N, LTPD, beta, p = seq(0, 0.3, 0.001), Plots = TRUE)
   \item{p}{fraction nonconforming}
   \item{Plots}{logical indicating if the four plots are required}
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-}
 \references{
 Schilling, E.G. (1978) \dQuote{A Lot Sensitive Sampling Plan for Compliance Testing and Acceptance Inspection}, \emph{Journal of Quality Technology} \bold{10}(2), pp47-51.
 }

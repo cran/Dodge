@@ -11,8 +11,8 @@ A number of sampling plans can be compared for their operating characteristics a
 \tabular{ll}{
 Package: \tab Dodge\cr
 Type: \tab Package\cr
-Version: \tab 0.6\cr
-Date: \tab 2011-03-14\cr
+Version: \tab 0.7\cr
+Date: \tab 2012-10-31\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 }
@@ -26,8 +26,3 @@ Maintainer: Jonathan Godfrey <a.j.godfrey@massey.ac.nz>
 Dodge
 }
 \keyword{ package }
-\seealso{
-%~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
-}
-\examples{
-}
