@@ -1,4 +1,4 @@
-6e161cb0458b184b4bdb19a743e90c75 *DESCRIPTION
+fcb27c50b901d0bec91108518f9810b0 *DESCRIPTION
 df390c53434517b304ac5db487184641 *NAMESPACE
 836da83ceaef1237df835f7e33f58767 *R/Acceptance.r
 463f09ea16926c77be683de98fc0435b *R/Chain.r
@@ -12,7 +12,7 @@ f9e16cbed907dbbe2ceff7764ddcbfdc *R/Single.r
 bc94a79c5895ddb6bb9d3fb5c6c18caf *inst/CITATION
 88fd3bffc9f5e19edcc9d98adc7a9632 *man/ChainSamplingPlans.Rd
 dd196cb2ca76f38ef282ea01a451d662 *man/CurtASN.Rd
-3c119082e2189329bd13d35d15bfb460 *man/Dodge-package.Rd
+d65d8d7263fbcea6948d89e078c0dc98 *man/Dodge-package.Rd
 96c94ea77aa5ee2c4d91c5e02c88f7cb *man/DoubleSamplingPlans.Rd
 333a0cbd8dbe5c042605eb2a9959befd *man/LSP.Rd
 36380a810c698d29699dc4a12d4e20b2 *man/SeqDesign.Rd

@@ -11,8 +11,8 @@ A number of sampling plans can be compared for their operating characteristics a
 \tabular{ll}{
 Package: \tab Dodge\cr
 Type: \tab Package\cr
-Version: \tab 0.7\cr
-Date: \tab 2012-10-31\cr
+Version: \tab 0.8\cr
+Date: \tab 2013-09-18\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 }
