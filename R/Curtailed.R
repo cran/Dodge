@@ -1,4 +1,24 @@
 
+#' Curtailed Average Sample Number
+#' 
+#' Computes the average sample number for a curtailed inspection plan for
+#' single sampling plans. Functionality is currently available for only the
+#' binomial distribution.
+#' 
+#' 
+#' @aliases CurtASN CurtBinomial
+#' @param n the sample size (potential)
+#' @param Ac the acceptance number
+#' @param p a vector of values for the possible fraction of product that is
+#' nonconforming
+#' @param Plots logical to request generation of the four plots
+#' @author Raj Govindaraju with minor editing by Jonathan Godfrey
+#' @examples
+#' 
+#' CurtBinomial(20,1)
+#' 
+
+#' @export
 CurtBinomial= function(n, Ac, p=seq(0, 0.5, .01), Plots=TRUE)
 {
 # The ASN Function for Curtailed Single
@@ -22,16 +42,4 @@ if(Plots){
 plot(results)
 }
 return(results)
-}
-
-
-print.CurtSampPlan = function(x,...){
-print.default(x,...)
-}
-
-plot.CurtSampPlan=function(x,y=NULL,...){
-plot(x$p, x$ASN.full, type="l", ylim=c(1, x$n), ylab="ASN", col="red", lty=2)
-par(new=TRUE)
-plot(x$p, x$ASN.semi, type="l", ylim=c(1, x$n), ylab="", col="blue", lty=1)
-legend("topright", legend =c("Fully Curtailed ASN","Semi-curtailed ASN"), lty=2:1, col = c("red", "blue"))
 }

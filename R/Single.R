@@ -1,4 +1,29 @@
+#' Single Sampling Plans
+#' 
+#' Single sampling plans for the binomial, hypergeometric and Poisson
+#' distributions.
+#' 
+#' 
+#' @aliases SSPlanBinomial SingleSamplingPlans SSPlanHyper SSPlanPoisson
+#' @param N the lot size
+#' @param n the sample size
+#' @param Ac the acceptance number, being the maximum allowable number of
+#' non-conforming units or non-conformities
+#' @param p a vector of values for the possible fraction of product that is
+#' non-conforming
+#' @param Plots logical to request generation of the four plots
+#' @author Raj Govindaraju with minor editing by Jonathan Godfrey
+#' @references Dodge, H.F. and Romig, H.G. (1959) \dQuote{Sampling Inspection
+#' Tables, Single and Double Sampling}, Second edition, John Wiley and Sons, New
+#' York.
+#' @examples
+#' 
+#' SSPlanBinomial(1000, 20,1)
+#' SSPlanHyper(5000, 200,3)
+#' SSPlanPoisson(1000, 20,1)
+#' 
 
+#' @export
 SSPlanBinomial=function(N,n,Ac, p=seq(0, 0.3, .001), Plots=TRUE)
 {
 OC = pbinom(Ac, n, p)
@@ -13,6 +38,7 @@ plot(results)
 return(results)
 }
 
+#' @export
 SSPlanHyper=function(N,n,Ac, p=seq(0, 0.3, .001), Plots=TRUE)
 {
 OC = phyper(Ac, N*p, N*(1-p), n)
@@ -27,6 +53,7 @@ plot(results)
 return(results)
 }
 
+#' @export
 SSPlanPoisson=function(N, n,Ac, p=seq(0, 0.3, .001), Plots=TRUE)
 {
 OC = ppois(Ac,n*p)
@@ -41,6 +68,31 @@ plot(results)
 return(results)
 }
 
+
+#' Single Sampling Plan Designs
+#' 
+#' Design a single sampling plan for given AQL, alpha, LQL, and beta. Currently
+#' there are functions for the binomial and Poisson distributions.
+#' 
+#' 
+#' @aliases SSPDesign SSPDesignBinomial SSPDesignPoisson
+#' @param AQL Acceptable quality level
+#' @param alpha producer's risk
+#' @param LQL Limiting quality level
+#' @param beta consumers' risk
+#' @author Raj Govindaraju with minor editing by Jonathan Godfrey
+#' @references Dodge, H.F. and Romig, H.G. (1959) \dQuote{Sampling Inspection
+#' Tables, Single and Double Sampling}, Second edition, John Wiley and Sons, New
+#' York.
+#' @examples
+#' 
+#' SSPDesignBinomial(0.01, 0.05, 0.04, 0.05)
+#' SSPDesignPoisson(0.01, 0.05, 0.04, 0.05)
+#' 
+
+
+
+#' @export
 SSPDesignBinomial =function(AQL, alpha, LQL, beta){
 nl=function(Ac, LQL, beta)
 {
@@ -72,6 +124,7 @@ n=nl(Ac, LQL, beta)
 return(data.frame(n, Ac))
 }
 
+#' @export
 SSPDesignPoisson =function(AQL, alpha, LQL, beta)
 {
 nl=function(Ac, LQL, beta)
